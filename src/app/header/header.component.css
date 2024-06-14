@@ -1,0 +1,26 @@
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-content .app-name {
+    font-size: 18px;
+  }
+  
+  .header-content img {
+    max-height: 50px; 
+    width: auto;     
+  }
+  
+  

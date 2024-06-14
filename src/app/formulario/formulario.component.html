@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div style="border: 1pt solid #fbb; text-align: center;">
+<h1>Crear Cliente</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="save()">
+
+
+<div>
+    <label for="tipoDocumento" >Tipo Documento</label>
+    <input type="text" formControlName="tipoDocumento">
+</div>
+<div>
+    <label  for="numeroDocumento">Numero Documento</label>
+    <input type="text" formControlName="numeroDocumento">
+</div>
+<div>
+    <label for="apellido">Apellido</label>
+    <input type="text" formControlName="apellido">
+</div>
+<div>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" formControlName="ciudad">
+</div>
+<div>
+    <label for="residencia">Residencia</label>
+    <input type="text" formControlName="residencia">
+</div>
+<div>
+    <label for="telefono">Telefono</label>
+    <input type="text" formControlName="telefono">
+</div>
+<div>
+   <input type="submit" value="Crear">
+   
+</div>
+
+</form>
+<button routerLink="/">Cancelar</button>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
