@@ -1,0 +1,32 @@
+A.SELECT nombre FROM oficina WHERE gerente LIKE '%Carlos%';
+B.SELECT oficina.nombre AS nombre_oficina,ciudades.nombre AS nombre_ciudad, departamento.nombre AS nombre_departamento FROM oficina
+JOIN 
+    ciudades ON oficina.cod_ciudad = ciudades.codigo
+JOIN 
+    departamento ON ciudades.cod_departamento = departamento.codigo;
+
+C.SELECT  oficina.nombre AS nombre_oficina FROM oficina
+JOIN 
+    inventario ON oficina.codigo = inventario.cod_oficina
+JOIN 
+    producto ON inventario.cod_producto = producto.codigo
+WHERE 
+    producto.descripcion LIKE '%PC%';
+
+D.SELECT oficina.nombre AS nombre_oficina,SUM(inventario.existencia) AS total_existencia FROM oficina
+JOIN 
+    inventario ON oficina.codigo = inventario.cod_oficina
+GROUP BY 
+    oficina.nombre
+ORDER BY 
+    total_existencia DESC
+LIMIT 1;
+
+E.SELECT oficina.nombre AS nombre_oficina,SUM(inventario.existencia) AS total_existencia FROM oficina
+JOIN 
+    inventario ON oficina.codigo = inventario.cod_oficina
+GROUP BY 
+    oficina.nombre
+ORDER BY 
+    total_existencia ASC
+LIMIT 1;
